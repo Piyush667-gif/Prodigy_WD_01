@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar" id="navbar">
+        <div class="logo-container">
+  <img src="logo-prodigy.jpg" alt="Logo" class="logo">
+  <span class="company-name">Prodigy InfoTech</span>
+</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#services" class="nav-link" data-section="services">
+                        Services <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#web-design" class="dropdown-link">Web Design</a></li>
+                        <li><a href="#development" class="dropdown-link">Development</a></li>
+                        <li><a href="#seo" class="dropdown-link">SEO</a></li>
+                        <li><a href="#consulting" class="dropdown-link">Consulting</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-extras">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn" id="search-btn">🔍</button>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </nav>
+
+    <!-- Search Results -->
+    <div class="search-results" id="search-results"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section-content">
+            <div class="hero-content">
+                <h1>Transforming the Way People Learn</h1>
+                <p>Experience advanced navigation with scroll effects, search, themes, and more!</p>
+                <button class="cta-button" id="cta-button">Get Started</button>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">↓</div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section section-content">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>This section demonstrates advanced navigation features including active link highlighting, scroll progress, and theme switching.</p>
+                <div class="content-grid">
+                    <div class="content-card" data-aos="fade-up">
+                        <h3>Software Development </h3>
+                        <p>Designing, building, testing, and maintaining software applications to meet specific requirements and solve real-world problems efficiently and effectively always.</p>
+                    </div>
+                    <div class="content-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Web Dev</h3>
+                        <p>Creating and maintaining websites, web applications, and mobile applications using various programming languages, frameworks, and technologies online.</p>
+                    </div>
+                    <div class="content-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Full Stack Web Dev</h3>
+                        <p>Developing complete web applications by mastering both front-end user interface and back-end server-side logic, database integration seamlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section alt-bg section-content">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p>Comprehensive solutions with advanced navigation and user experience features.</p>
+                <div class="services-grid">
+                    <div class="service-item" id="web-design" data-aos="zoom-in">
+                        <div class="service-icon">🎨</div>
+                        <h3>Web Design</h3>
+                        <p>Creating beautiful and functional websites with modern design principles</p>
+                    </div>
+                    <div class="service-item" id="development" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="service-icon">💻</div>
+                        <h3>Development</h3>
+                        <p>Building robust web applications with cutting-edge technologies</p>
+                    </div>
+                    <div class="service-item" id="seo" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="service-icon">📈</div>
+                        <h3>SEO</h3>
+                        <p>Optimizing for search engines to increase visibility and traffic</p>
+                    </div>
+                    <div class="service-item" id="consulting" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="service-icon">💡</div>
+                        <h3>Consulting</h3>
+                        <p>Strategic digital guidance for business growth and success</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section section-content">
+            <div class="container">
+                <h2>Portfolio</h2>
+                <p>Showcase of our work with interactive filtering and search capabilities.</p>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="web" data-aos="fade-up">
+                        <div class="portfolio-content">
+                            <h4>E-commerce Website</h4>
+                            <p>Modern online store</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-content">
+                            <h4>Mobile App</h4>
+                            <p>iOS & Android app</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="design" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-content">
+                            <h4>Brand Identity</h4>
+                            <p>Complete branding</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                        <div class="portfolio-content">
+                            <h4>Corporate Website</h4>
+                            <p>Business platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section alt-bg section-content">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for your next project.</p>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                <span class="form-error" id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                <span class="form-error" id="email-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                                <span class="form-error" id="message-error"></span>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loader">Sending...</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <h4>📧 Email</h4>
+                            <p>contact@example.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>📞 Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>📍 Address</h4>
+                            <p>123 Main St, City, State 12345</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
